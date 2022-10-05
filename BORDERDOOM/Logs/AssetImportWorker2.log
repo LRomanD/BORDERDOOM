@@ -1,0 +1,461 @@
+Using pre-set license
+Built from '2021.3/staging' branch; Version is '2021.3.11f1 (0a5ca18544bf) revision 679073'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 10  (10.0.19044) 64bit Professional' Language: 'en' Physical Memory: 16313 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+D:\Unity\Hub\Editor\2021.3.11f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker2
+-projectPath
+C:/Users/romad/Desktop/GitHub/BORDERDOOM/BORDERDOOM
+-logFile
+Logs/AssetImportWorker2.log
+-srvPort
+57848
+Successfully changed project path to: C:/Users/romad/Desktop/GitHub/BORDERDOOM/BORDERDOOM
+C:/Users/romad/Desktop/GitHub/BORDERDOOM/BORDERDOOM
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Refreshing native plugins compatible for Editor in 121.75 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2021.3.11f1 (0a5ca18544bf)
+[Subsystems] Discovering subsystems at path D:/Unity/Hub/Editor/2021.3.11f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/romad/Desktop/GitHub/BORDERDOOM/BORDERDOOM/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce GTX 1660 SUPER (ID=0x21c4)
+    Vendor:   NVIDIA
+    VRAM:     5991 MB
+    Driver:   31.0.15.1748
+Initialize mono
+Mono path[0] = 'D:/Unity/Hub/Editor/2021.3.11f1/Editor/Data/Managed'
+Mono path[1] = 'D:/Unity/Hub/Editor/2021.3.11f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'D:/Unity/Hub/Editor/2021.3.11f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56984
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: D:/Unity/Hub/Editor/2021.3.11f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.004600 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 149.43 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.917 seconds
+Domain Reload Profiling:
+	ReloadAssembly (918ms)
+		BeginReloadAssembly (81ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (617ms)
+			LoadAssemblies (80ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (160ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (37ms)
+			SetupLoadedEditorAssemblies (359ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (7ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (150ms)
+				BeforeProcessingInitializeOnLoad (2ms)
+				ProcessInitializeOnLoadAttributes (146ms)
+				ProcessInitializeOnLoadMethodAttributes (54ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.009893 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\romad\Desktop\GitHub\BORDERDOOM\BORDERDOOM\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\romad\Desktop\GitHub\BORDERDOOM\BORDERDOOM\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 127.22 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.496 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1497ms)
+		BeginReloadAssembly (97ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (6ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (18ms)
+		EndReloadAssembly (1289ms)
+			LoadAssemblies (95ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (328ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (105ms)
+			SetupLoadedEditorAssemblies (703ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (3ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (127ms)
+				BeforeProcessingInitializeOnLoad (134ms)
+				ProcessInitializeOnLoadAttributes (394ms)
+				ProcessInitializeOnLoadMethodAttributes (40ms)
+				AfterProcessingInitializeOnLoad (4ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (7ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.12 seconds
+Refreshing native plugins compatible for Editor in 1.37 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 6533 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 179 unused Assets / (12.9 MB). Loaded Objects now: 6873.
+Memory consumption went from 287.7 MB to 274.8 MB.
+Total: 6.343900 ms (FindLiveObjects: 0.664200 ms CreateObjectMapping: 0.178800 ms MarkObjects: 2.778800 ms  DeleteObjects: 2.721300 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 7724.454561 seconds.
+  path: Assets/Zombie/Animations/Zombie@Z_Walk_InPlace.FBX
+  artifactKey: Guid(165698eac7ca81041ad603fc5a3afa55) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Zombie/Animations/Zombie@Z_Walk_InPlace.FBX using Guid(165698eac7ca81041ad603fc5a3afa55) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e009ccdf16506829fbb132b17b256919') in 3.974589 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000090 seconds.
+  path: Assets/Zombie/Animations/Zombie@Z_Idle.FBX
+  artifactKey: Guid(0d6373858f853604b960cf84b7d3dfbf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Zombie/Animations/Zombie@Z_Idle.FBX using Guid(0d6373858f853604b960cf84b7d3dfbf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5bab4beb7f645ea1245a4b9cf7935eee') in 0.372882 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000051 seconds.
+  path: Assets/Zombie/Animations/Zombie@Z_Walk1_InPlace.FBX
+  artifactKey: Guid(3fa7045af54b82c47852949257d136c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Zombie/Animations/Zombie@Z_Walk1_InPlace.FBX using Guid(3fa7045af54b82c47852949257d136c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f83cd96247fd158b20f6f72f33dce8c1') in 0.305021 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.140741 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\romad\Desktop\GitHub\BORDERDOOM\BORDERDOOM\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\romad\Desktop\GitHub\BORDERDOOM\BORDERDOOM\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.80 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.508 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1509ms)
+		BeginReloadAssembly (204ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (44ms)
+		EndReloadAssembly (1219ms)
+			LoadAssemblies (292ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (325ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (69ms)
+			SetupLoadedEditorAssemblies (561ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (11ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (106ms)
+				ProcessInitializeOnLoadAttributes (402ms)
+				ProcessInitializeOnLoadMethodAttributes (36ms)
+				AfterProcessingInitializeOnLoad (3ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (5ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 2.62 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 6386 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 150 unused Assets / (12.8 MB). Loaded Objects now: 6937.
+Memory consumption went from 290.8 MB to 277.9 MB.
+Total: 6.273500 ms (FindLiveObjects: 0.516600 ms CreateObjectMapping: 0.159400 ms MarkObjects: 2.639600 ms  DeleteObjects: 2.956800 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 179.807207 seconds.
+  path: Assets/TerrainDemoScene_HDRP/Readme.asset
+  artifactKey: Guid(83c2ed844a8c74b779a4c823d16594b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TerrainDemoScene_HDRP/Readme.asset using Guid(83c2ed844a8c74b779a4c823d16594b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a7dd01cb65c680b9cbe33ab0b1d625df') in 0.028067 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 251.582593 seconds.
+  path: Assets/TerrainDemoScene_HDRP/Volumes
+  artifactKey: Guid(102a993d49ac4b440b0bdd444b5b3c7d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TerrainDemoScene_HDRP/Volumes using Guid(102a993d49ac4b440b0bdd444b5b3c7d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6c948b104137dbdc1c40af57a437c541') in 0.001409 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.539218 seconds.
+  path: Assets/TerrainDemoScene_HDRP/VFXGraphs
+  artifactKey: Guid(a5100d9d5620e4bf1ada5abb4b7674a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TerrainDemoScene_HDRP/VFXGraphs using Guid(a5100d9d5620e4bf1ada5abb4b7674a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '210b1b8e97fd66e1cb68e03bf6bf7765') in 0.001399 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.581711 seconds.
+  path: Assets/TerrainDemoScene_HDRP/Terrain
+  artifactKey: Guid(1c7d9479254419746b6bef253ae5853b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TerrainDemoScene_HDRP/Terrain using Guid(1c7d9479254419746b6bef253ae5853b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd064b97d4ce5af87c7c491403dea04ad') in 0.001837 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.564183 seconds.
+  path: Assets/TerrainDemoScene_HDRP/ShaderGraphs
+  artifactKey: Guid(214f6da7065a69346b1ec423d8756968) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TerrainDemoScene_HDRP/ShaderGraphs using Guid(214f6da7065a69346b1ec423d8756968) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c2405a2396aac63244e6175dc1053da0') in 0.001439 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.734873 seconds.
+  path: Assets/TerrainDemoScene_HDRP/Scenes
+  artifactKey: Guid(92a07c90fbef0af4c8a47600f87f22fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TerrainDemoScene_HDRP/Scenes using Guid(92a07c90fbef0af4c8a47600f87f22fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '813ebf2ed1c280b35f3f94d8024d4efb') in 0.001692 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.899428 seconds.
+  path: Assets/TerrainDemoScene_HDRP/Scenes/TerrainDemoScene.unity
+  artifactKey: Guid(9a18cc5d35536fd428eb6e90b3402589) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TerrainDemoScene_HDRP/Scenes/TerrainDemoScene.unity using Guid(9a18cc5d35536fd428eb6e90b3402589) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd9b7cd67c0760d9d7ee99dad99e546c7') in 0.001628 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 157.888374 seconds.
+  path: Assets/TerrainDemoScene_HDRP/Scenes/TerrainDemoScene/LightingData.asset
+  artifactKey: Guid(09203aedde0998844a074bcedd4e8df6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TerrainDemoScene_HDRP/Scenes/TerrainDemoScene/LightingData.asset using Guid(09203aedde0998844a074bcedd4e8df6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3518a29cbb684a6b0481712747c2d79c') in 0.006647 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.025462 seconds.
+  path: Assets/TerrainDemoScene_HDRP/Scenes/TerrainDemoScene/ReflectionProbe-0.exr
+  artifactKey: Guid(3edef869bbd14304ab806df44d3728cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TerrainDemoScene_HDRP/Scenes/TerrainDemoScene/ReflectionProbe-0.exr using Guid(3edef869bbd14304ab806df44d3728cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a165991b12ae9d9429a414c2b7685504') in 0.075293 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/TerrainDemoScene_HDRP/Scenes/TerrainDemoScene/ReflectionProbe-13.exr
+  artifactKey: Guid(ff66c9760e94b42c485070d0867cee20) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TerrainDemoScene_HDRP/Scenes/TerrainDemoScene/ReflectionProbe-13.exr using Guid(ff66c9760e94b42c485070d0867cee20) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd3e04a6336f9969223dcbd72e1f39ac7') in 0.056814 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/TerrainDemoScene_HDRP/Scenes/TerrainDemoScene/ReflectionProbe-18.exr
+  artifactKey: Guid(98baa4509773243ccbd903074b95e78f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TerrainDemoScene_HDRP/Scenes/TerrainDemoScene/ReflectionProbe-18.exr using Guid(98baa4509773243ccbd903074b95e78f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6426660a942ac1be9dc12fc69db68b88') in 0.040734 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/TerrainDemoScene_HDRP/Scenes/TerrainDemoScene/ReflectionProbe-10.exr
+  artifactKey: Guid(273b81726a5bf534c9b6ffe567a761ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TerrainDemoScene_HDRP/Scenes/TerrainDemoScene/ReflectionProbe-10.exr using Guid(273b81726a5bf534c9b6ffe567a761ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '399f0aa7bff96cae2ff6efa401e0d8b9') in 0.039674 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/TerrainDemoScene_HDRP/Scenes/TerrainDemoScene/ReflectionProbe-17.exr
+  artifactKey: Guid(e8b1dccf8d6bb4f0c8d48deb56098830) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TerrainDemoScene_HDRP/Scenes/TerrainDemoScene/ReflectionProbe-17.exr using Guid(e8b1dccf8d6bb4f0c8d48deb56098830) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c59b2ec18643c05f3972755e7acce46a') in 0.038674 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/TerrainDemoScene_HDRP/Scenes/TerrainDemoScene/ReflectionProbe-2.exr
+  artifactKey: Guid(dd60661b8cf38024294d07523417e1ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TerrainDemoScene_HDRP/Scenes/TerrainDemoScene/ReflectionProbe-2.exr using Guid(dd60661b8cf38024294d07523417e1ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5540de6d0a17c9cde32b46c3bde17530') in 0.038838 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/TerrainDemoScene_HDRP/Scenes/TerrainDemoScene/ReflectionProbe-9.exr
+  artifactKey: Guid(68a7cac4d5349c74bbb07bf7a6fa2e3f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TerrainDemoScene_HDRP/Scenes/TerrainDemoScene/ReflectionProbe-9.exr using Guid(68a7cac4d5349c74bbb07bf7a6fa2e3f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '70d34064548a3716ebd7949381a256e7') in 0.037665 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/TerrainDemoScene_HDRP/Scenes/TerrainDemoScene/Lightmap-0_comp_light.exr
+  artifactKey: Guid(a37b584766c18fb4b99faf75f9bde065) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TerrainDemoScene_HDRP/Scenes/TerrainDemoScene/Lightmap-0_comp_light.exr using Guid(a37b584766c18fb4b99faf75f9bde065) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c9929cf83297fd2646f62177e2249f55') in 0.036220 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/TerrainDemoScene_HDRP/Scenes/TerrainDemoScene/ReflectionProbe-16.exr
+  artifactKey: Guid(780fd63394fc17541963e0363dd9d55d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TerrainDemoScene_HDRP/Scenes/TerrainDemoScene/ReflectionProbe-16.exr using Guid(780fd63394fc17541963e0363dd9d55d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0beb7c8106dee13a2812985e3e67afff') in 0.038847 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/TerrainDemoScene_HDRP/Scenes/TerrainDemoScene/ReflectionProbe-4.exr
+  artifactKey: Guid(30d52396acf8fda43b349411aef86d8b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TerrainDemoScene_HDRP/Scenes/TerrainDemoScene/ReflectionProbe-4.exr using Guid(30d52396acf8fda43b349411aef86d8b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '36fdda4425098ca74631450387f4e3f1') in 0.040392 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/TerrainDemoScene_HDRP/Scenes/TerrainDemoScene/ReflectionProbe-6.exr
+  artifactKey: Guid(2cfdc81520cc12545ba438f075ef7817) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TerrainDemoScene_HDRP/Scenes/TerrainDemoScene/ReflectionProbe-6.exr using Guid(2cfdc81520cc12545ba438f075ef7817) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7ee08c80513db9a6c8d931136f070df1') in 0.039907 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 10.669133 seconds.
+  path: Assets/TerrainDemoScene_HDRP/Settings/HDRP/HDRenderPipelineGlobalSettings.asset
+  artifactKey: Guid(715138bc35250de4f9610d3d1294bcbc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TerrainDemoScene_HDRP/Settings/HDRP/HDRenderPipelineGlobalSettings.asset using Guid(715138bc35250de4f9610d3d1294bcbc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e846026860fdc7be5ea57d76e7db3f2a') in 0.222427 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/TerrainDemoScene_HDRP/Settings/HDRP/HDRP Medium Quality.asset
+  artifactKey: Guid(3e2e6bfc59709614ab90c0cd7d755e48) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TerrainDemoScene_HDRP/Settings/HDRP/HDRP Medium Quality.asset using Guid(3e2e6bfc59709614ab90c0cd7d755e48) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Tried to setup DLSS with a null globalSettings object.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEngine.Rendering.HighDefinition.HDRenderPipeline:SetupDLSSFeature (UnityEngine.Rendering.HighDefinition.HDRenderPipelineGlobalSettings) (at Library/PackageCache/com.unity.render-pipelines.high-definition@12.1.7/Runtime/RenderPipeline/HDRenderPipeline.cs:576)
+UnityEngine.Rendering.HighDefinition.HDRenderPipelineAsset:OnEnable () (at Library/PackageCache/com.unity.render-pipelines.high-definition@12.1.7/Runtime/RenderPipeline/HDRenderPipelineAsset.cs:32)
+
+(Filename: Library/PackageCache/com.unity.render-pipelines.high-definition@12.1.7/Runtime/RenderPipeline/HDRenderPipeline.cs Line: 576)
+
+ -> (artifact id: 'e942d5245c627c707838df67b16030c2') in 0.099341 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/TerrainDemoScene_HDRP/Settings/HDRP/HDRP Screenshot Quality.asset
+  artifactKey: Guid(1a99886d576eb4ccaa58365e7bd007a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TerrainDemoScene_HDRP/Settings/HDRP/HDRP Screenshot Quality.asset using Guid(1a99886d576eb4ccaa58365e7bd007a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Tried to setup DLSS with a null globalSettings object.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEngine.Rendering.HighDefinition.HDRenderPipeline:SetupDLSSFeature (UnityEngine.Rendering.HighDefinition.HDRenderPipelineGlobalSettings) (at Library/PackageCache/com.unity.render-pipelines.high-definition@12.1.7/Runtime/RenderPipeline/HDRenderPipeline.cs:576)
+UnityEngine.Rendering.HighDefinition.HDRenderPipelineAsset:OnEnable () (at Library/PackageCache/com.unity.render-pipelines.high-definition@12.1.7/Runtime/RenderPipeline/HDRenderPipelineAsset.cs:32)
+
+(Filename: Library/PackageCache/com.unity.render-pipelines.high-definition@12.1.7/Runtime/RenderPipeline/HDRenderPipeline.cs Line: 576)
+
+ -> (artifact id: '9c50ff8ec2197b3bb6890a35e7958307') in 0.061609 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/TerrainDemoScene_HDRP/Settings/HDRP/HDRP Ultra Quality.asset
+  artifactKey: Guid(69e212d0fdcc2a848b85604d55ac1170) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TerrainDemoScene_HDRP/Settings/HDRP/HDRP Ultra Quality.asset using Guid(69e212d0fdcc2a848b85604d55ac1170) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Tried to setup DLSS with a null globalSettings object.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEngine.Rendering.HighDefinition.HDRenderPipeline:SetupDLSSFeature (UnityEngine.Rendering.HighDefinition.HDRenderPipelineGlobalSettings) (at Library/PackageCache/com.unity.render-pipelines.high-definition@12.1.7/Runtime/RenderPipeline/HDRenderPipeline.cs:576)
+UnityEngine.Rendering.HighDefinition.HDRenderPipelineAsset:OnEnable () (at Library/PackageCache/com.unity.render-pipelines.high-definition@12.1.7/Runtime/RenderPipeline/HDRenderPipelineAsset.cs:32)
+
+(Filename: Library/PackageCache/com.unity.render-pipelines.high-definition@12.1.7/Runtime/RenderPipeline/HDRenderPipeline.cs Line: 576)
+
+ -> (artifact id: 'd59b483c5ed75c41b1efac15cf9f393a') in 0.057014 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.008927 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\romad\Desktop\GitHub\BORDERDOOM\BORDERDOOM\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\romad\Desktop\GitHub\BORDERDOOM\BORDERDOOM\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.87 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.323 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1324ms)
+		BeginReloadAssembly (139ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (48ms)
+		EndReloadAssembly (1097ms)
+			LoadAssemblies (89ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (332ms)
+			ReleaseScriptCaches (4ms)
+			RebuildScriptCaches (95ms)
+			SetupLoadedEditorAssemblies (532ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (11ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (105ms)
+				ProcessInitializeOnLoadAttributes (370ms)
+				ProcessInitializeOnLoadMethodAttributes (41ms)
+				AfterProcessingInitializeOnLoad (3ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (6ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 2.95 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 6386 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 151 unused Assets / (12.9 MB). Loaded Objects now: 6957.
+Memory consumption went from 291.1 MB to 278.3 MB.
+Total: 6.891500 ms (FindLiveObjects: 0.846800 ms CreateObjectMapping: 0.530100 ms MarkObjects: 2.730100 ms  DeleteObjects: 2.783600 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0
