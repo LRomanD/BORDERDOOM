@@ -5,20 +5,28 @@ using TMPro;
 
 public class Projectiles : MonoBehaviour
 {
-    public GameObject bullet;//пуля
+    public GameObject bullet;
 
-    public float shootForce, upwardForce;//сила пули
+    public float shootForce, upwardForce;
 
-    //характеристики пушки
+
     public float timebetweenShooting, spread, reloadTime, timeBetweenShots;
     public int magazineSize, bulletPerTap;
     public bool allowButtonHold;
 
     int bulletsLeft, bulletsShot;
+    public int bulletsRemain
+    {
+        get { return bulletsLeft; }
+    }
 
     bool shooting, readyToShoot, reloading;
 
-    //ссылки
+    public bool isReloading
+    {
+        get { return reloading; }
+    }
+
     public Camera fpsCam;
     public Transform attackPoint;
 

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public int hp = 100;
+
     private CharacterController character_Controller;//объявление компонента
 
     private Vector3 move_Direction;//
