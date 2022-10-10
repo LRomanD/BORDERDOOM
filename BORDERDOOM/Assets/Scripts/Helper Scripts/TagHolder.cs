@@ -6,13 +6,13 @@ public class Axis//для упрощения, чтобы не исправлять орфографические ошибки
 {
     public const string HORIZONTAL = "Horizontal";//статичная переменная, нельзя изменить, можно использовать
     public const string VERTICAL = "Vertical";//статичная переменная, нельзя изменить, можно использовать
-}
+}//Axis
 
 public class MouseAxis
 {
     public const string MOUSE_X = "Mouse X";//статичная переменная, нельзя изменить, можно использовать
     public const string MOUSE_Y = "Mouse Y";//статичная переменная, нельзя изменить, можно использовать
-}
+}//MouseAxis
 
 public class AnimationTags
 {
@@ -28,4 +28,17 @@ public class AnimationTags
     public const string DEAD_TRIGGER = "Dead";
 
 
-}
+}//AnimationTags
+
+public class Tags
+{
+    public const string LOOK_ROOT = "Look Root";
+    public const string ZOOM_CAMERA = "FP Camera";
+    public const string CROSSHAIR = "Crosshair";
+    public const string ARROW_TAG = "Arrow";
+
+    public const string AXE_TAG = "Axe";
+
+    public const string PLAYER_TAG = "Player";
+    public const string ENEMY_TAG = "Enemy";
+}//Tags
