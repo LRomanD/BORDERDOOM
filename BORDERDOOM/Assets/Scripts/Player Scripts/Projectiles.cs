@@ -31,8 +31,11 @@ public class Projectiles : MonoBehaviour
     public Transform attackPoint;
 
     //графика
+
     public GameObject muzzleFlash;
     public TextMeshProUGUI ammunitionDisplay;
+
+
 
     public bool allowInvoke = true;
 
@@ -104,7 +107,13 @@ public class Projectiles : MonoBehaviour
         currentBullet.GetComponent<Rigidbody>().AddForce(fpsCam.transform.up * upwardForce, ForceMode.Impulse);//upwardForce - для гранат
 
         //огонёк из дула, если есть
-        if (muzzleFlash != null) Instantiate(muzzleFlash, attackPoint.position, Quaternion.identity);
+        if (muzzleFlash != null) 
+        { 
+            GameObject effect = Instantiate(muzzleFlash, attackPoint.position, transform.rotation);
+            Destroy(effect, 0.1f);
+        }
+
+        
 
         bulletsLeft--;
         bulletsShot++;
@@ -120,7 +129,14 @@ public class Projectiles : MonoBehaviour
 
 
 
+
+
+
+
     }//Shoot
+
+    
+
 
     private void ResetShot()
     {
