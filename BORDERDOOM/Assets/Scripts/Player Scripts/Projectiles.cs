@@ -17,6 +17,8 @@ public class Projectiles : MonoBehaviour
     public float damage = 20f;
 
     int bulletsLeft, bulletsShot;
+
+    GameObject currentBullet;
     public int bulletsRemain
     {
         get { return bulletsLeft; }
@@ -32,60 +34,51 @@ public class Projectiles : MonoBehaviour
     public Camera fpsCam;
     public Transform attackPoint;
 
-    //графика
-
     public GameObject muzzleFlash;
-    public TextMeshProUGUI ammunitionDisplay;
+    //public TextMeshProUGUI ammunitionDisplay;
 
 
 
     public bool allowInvoke = true;
 
+    private void Start()
+    {
+        Invoke("DestroyProjectile", 5f);
+    }
+
     private void Awake()
     {
-        //убеждение, что магазин полон
         bulletsLeft = magazineSize;
         readyToShoot = true;
-
-    }//Awake
+    }
 
     private void Update()
     {
         MyInput();
-
-        //установление дисплея патронов, если таковые присутствуют
-        if (ammunitionDisplay != null) ammunitionDisplay.SetText(bulletsLeft / bulletPerTap + " / " + magazineSize / bulletPerTap);
-    }//Update
+        //if (ammunitionDisplay != null) ammunitionDisplay.SetText(bulletsLeft / bulletPerTap + " / " + magazineSize / bulletPerTap);
+    }
 
     private void MyInput() 
     {
-        //проверка, можно ли держать кнопку выстрела
-        if (allowButtonHold) shooting = Input.GetKey(KeyCode.Mouse0);//можно
-        else shooting = Input.GetKeyDown(KeyCode.Mouse0);//нельзя
+        if (allowButtonHold) shooting = Input.GetKey(KeyCode.Mouse0);
+        else shooting = Input.GetKeyDown(KeyCode.Mouse0);
 
-        //стрельба
         if (readyToShoot && shooting && !reloading && bulletsLeft > 0)
         {
             bulletsShot = 0;
-
             Shoot();
         }
-
         if (Input.GetKeyDown(KeyCode.R) && bulletsLeft < magazineSize && !reloading) Reload();
         if (readyToShoot && shooting && !reloading && bulletsLeft <= 0) Reload();
-    }//MyInput
+    }
 
     private void Shoot()
     {
-        //EnemyKilling enemyKilling;
-
         readyToShoot = false;
 
-        //нахождеие точного попадания с помощью raycast
-        Ray ray = fpsCam.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));//лучь сквозь центр экрана
+        Ray ray = fpsCam.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
         RaycastHit hit;
 
-        //проверка, если луч попал во что-нибудь
         Vector3 targetPoint;
         if (Physics.Raycast(ray, out hit))
         { 
@@ -93,33 +86,26 @@ public class Projectiles : MonoBehaviour
             {
                 /*enemyKilling = */hit.transform.GetComponent<EnemyKilling>().ApplyDamage(damage);
                 //enemyKilling.health--;
-                Debug.Log("Есть пробитие");
+                Debug.Log("Est probitie");
             }
             targetPoint = hit.point; 
         }
-        else targetPoint = ray.GetPoint(75);//если стреляешь далеко (например в небо)
+        else targetPoint = ray.GetPoint(75);
 
-        //расчёт расстояния от точки атаки до точки цели
         Vector3 directionWithoutSpread = targetPoint - attackPoint.position;
 
-        //расчёт разброса
         float x = Random.Range(-spread, spread);
         float y = Random.Range(-spread, spread);
 
-        //расчёт нового расстояния с разбросом
         Vector3 directionWithSpread = directionWithoutSpread + new Vector3(x, y, 0);
 
-        //инициализация пули/снаряда
-        GameObject currentBullet = Instantiate(bullet, attackPoint.position, Quaternion.identity);//заспавненная пуля будет храниться в этом объекте
+        currentBullet = Instantiate(bullet, attackPoint.position, Quaternion.identity);
 
-        //поворот пули в сторону, в которую стреляем
         currentBullet.transform.forward = directionWithoutSpread.normalized;
 
-        //добавление силы пуле
         currentBullet.GetComponent<Rigidbody>().AddForce(directionWithSpread.normalized * shootForce, ForceMode.Impulse);
-        currentBullet.GetComponent<Rigidbody>().AddForce(fpsCam.transform.up * upwardForce, ForceMode.Impulse);//upwardForce - для гранат
+        currentBullet.GetComponent<Rigidbody>().AddForce(fpsCam.transform.up * upwardForce, ForceMode.Impulse);
 
-        //огонёк из дула, если есть
         if (muzzleFlash != null) 
         { 
             GameObject effect = Instantiate(muzzleFlash, attackPoint.position, transform.rotation);
@@ -131,32 +117,25 @@ public class Projectiles : MonoBehaviour
         bulletsLeft--;
         bulletsShot++;
 
-        //вызывает ResetShot (если уже не вызван)
         if (allowInvoke)
         {
-            Invoke("ResetShot", timebetweenShooting);//стрельба со скоростью timebetweenShooting
+            Invoke("ResetShot", timebetweenShooting);
             allowInvoke = false;
         }
 
         if (bulletsShot < bulletPerTap && bulletsLeft > 0) Invoke("Shoot", timeBetweenShots);
+    }
 
-
-
-
-
-
-
-    }//Shoot
-
-    
-
+    void DestroyProjectile()
+    {
+        Destroy(currentBullet);
+    }
 
     private void ResetShot()
     {
-        //позволяет снова стрелять и вызывать
         readyToShoot = true;
         allowInvoke = true;
-    }//ResetShot
+    }
 
     private void Reload()
     {
@@ -170,4 +149,4 @@ public class Projectiles : MonoBehaviour
         reloading = false;
     }
 
-}//class
+}
