@@ -7,9 +7,10 @@ using UnityEngine.UI;
 public class UIScript : MonoBehaviour
 {
     [SerializeField] TMP_Text hp, ammo, reload_timer;
-
     [SerializeField] Projectiles projectiles;
     [SerializeField] PlayerController player;
+
+    private Image health_Stats, stamina_Stats;
 
     private float timer;
 
@@ -28,5 +29,17 @@ public class UIScript : MonoBehaviour
             reload_timer.text = "";
             timer = projectiles.reloadTime;
         }
+    }
+
+    public void Display_HealthStats(float healthValue)
+    {
+        healthValue /= 100f;
+        health_Stats.fillAmount = healthValue;
+    }
+
+    public void Display_StaminaStats(float staminaValue)
+    {
+        staminaValue /= 100f;
+        stamina_Stats.fillAmount = staminaValue;
     }
 }

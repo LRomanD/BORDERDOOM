@@ -128,7 +128,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7998555569071090619, guid: 10718e347ea85504d8f8d9f43cdf3e93, type: 3}
   m_PrefabInstance: {fileID: 7998555568858462599}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 904664538}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 795aabbd646a9a049961c7a25b18263f, type: 3}
@@ -542,6 +542,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12bb58f5d1de40940b4f441aff97c336, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemy_State: 0
   walk_Speed: 0.5
   run_Speed: 4
   chase_Distance: 20
@@ -551,6 +552,41 @@ MonoBehaviour:
   patrol_Radius_Max: 60
   patrol_For_This_Time: 15
   wait_Before_Attack: 2
+--- !u!114 &870414945
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 870414931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e52bfe879a94f14599819dc4311adbe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 300
+  is_Player: 0
+  is_Enemy: 1
+--- !u!1 &904664538 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7998555569071090622, guid: 10718e347ea85504d8f8d9f43cdf3e93, type: 3}
+  m_PrefabInstance: {fileID: 7998555568858462599}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &904664542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 904664538}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e52bfe879a94f14599819dc4311adbe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 10
+  is_Player: 1
+  is_Enemy: 0
 --- !u!1 &1057088315
 GameObject:
   m_ObjectHideFlags: 0

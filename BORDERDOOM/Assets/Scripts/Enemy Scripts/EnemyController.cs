@@ -16,7 +16,7 @@ public class EnemyController : MonoBehaviour
     private EnemyAnimator enemy_Anim;
     private NavMeshAgent navAgent;
 
-    private EnemyState enemy_State;
+    public EnemyState enemy_State;
 
     public float walk_Speed = 0.5f;//скорость ходьбы врага
     public float run_Speed = 4f;//скороость бега врага

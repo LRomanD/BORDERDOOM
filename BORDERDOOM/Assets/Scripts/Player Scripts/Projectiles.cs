@@ -14,6 +14,8 @@ public class Projectiles : MonoBehaviour
     public int magazineSize, bulletPerTap;
     public bool allowButtonHold;
 
+    public float damage = 20f;
+
     int bulletsLeft, bulletsShot;
     public int bulletsRemain
     {
@@ -75,6 +77,8 @@ public class Projectiles : MonoBehaviour
 
     private void Shoot()
     {
+        //EnemyKilling enemyKilling;
+
         readyToShoot = false;
 
         //нахождеие точного попадани€ с помощью raycast
@@ -83,7 +87,16 @@ public class Projectiles : MonoBehaviour
 
         //проверка, если луч попал во что-нибудь
         Vector3 targetPoint;
-        if (Physics.Raycast(ray, out hit)) targetPoint = hit.point;
+        if (Physics.Raycast(ray, out hit))
+        { 
+            if(hit.transform.tag == Tags.ENEMY_TAG)
+            {
+                /*enemyKilling = */hit.transform.GetComponent<EnemyKilling>().ApplyDamage(damage);
+                //enemyKilling.health--;
+                Debug.Log("≈сть пробитие");
+            }
+            targetPoint = hit.point; 
+        }
         else targetPoint = ray.GetPoint(75);//если стрел€ешь далеко (например в небо)
 
         //расчЄт рассто€ни€ от точки атаки до точки цели
