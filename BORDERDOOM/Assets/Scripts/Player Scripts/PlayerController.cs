@@ -60,4 +60,9 @@ public class PlayerController : MonoBehaviour
             vertical_Velocity = jump_Force;//к игроку применяется переменная силы прыжка, следовательно происходит движение по вертикали вверх
         }//если игрок касается земли и нажал на кнопку space
     }
+
+    public void HealthChange(float health)
+    {
+        hp = (int)health;
+    }
 }

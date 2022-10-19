@@ -7,18 +7,25 @@ using UnityEngine.UI;
 public class UIScript : MonoBehaviour
 {
     [SerializeField] TMP_Text hp, ammo, reload_timer;
-    public float health = 100;
+    //public float health = 100;
     [SerializeField] Projectiles projectiles;
     [SerializeField] PlayerController player;
+    //[SerializeField] EnemyKilling enemyKilling;
 
     private Image health_Stats, stamina_Stats;
 
     private float timer;
 
+    private void Start()
+    {
+        //enemyKilling = GameObject.Find("EnemyKilling").GetComponent<EnemyKilling>();
+    }
+
     void Update()
     {
-        
+
         hp.text = player.hp.ToString();
+        //hp.text = (enemyKilling.hp).ToString();
         ammo.text = string.Format("{0} / {1}", projectiles.bulletsRemain, projectiles.magazineSize);
         if (projectiles.isReloading)
         {

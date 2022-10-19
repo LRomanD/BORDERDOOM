@@ -6,11 +6,17 @@ using UnityEngine.AI;
 public class EnemyKilling : MonoBehaviour
 {
     public float health = 100f;
+    public float hp
+    {
+        get { return health; }
+    }
     //Animator anim;
     private EnemyAnimator enemy_Anim;
     private NavMeshAgent navAgent;
     private EnemyController enemy_Controller;
     private UIScript player_Stats;
+
+    //[SerializeField] PlayerController player;
 
 
     private bool is_Dead;
@@ -39,12 +45,13 @@ public class EnemyKilling : MonoBehaviour
 
 
         health -= damage;
+        //player.HealthChange(health);
 
         if (is_Player)
         {
             // show the stats(display the health UI value)
             //player_Stats.Display_HealthStats(health);
-            Debug.Log("gei");
+            Debug.Log("gei"); // sam takoi
         }
 
         if (is_Enemy)
