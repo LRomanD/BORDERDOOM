@@ -43,7 +43,8 @@ public class EnemyKilling : MonoBehaviour
         if (is_Player)
         {
             // show the stats(display the health UI value)
-            player_Stats.Display_HealthStats(health);
+            //player_Stats.Display_HealthStats(health);
+            Debug.Log("gei");
         }
 
         if (is_Enemy)
@@ -87,7 +88,7 @@ public class EnemyKilling : MonoBehaviour
             
 
             GetComponent<PlayerController>().enabled = false;
-            GetComponent<Projectiles>().enabled = false;
+            //GetComponent<Projectiles>().enabled = false;//breaking the death scenario. Without it - you can shoot while dying. Have to create a working analog
 
         }
 
@@ -106,7 +107,7 @@ public class EnemyKilling : MonoBehaviour
     }
     void RestartGame()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene("SampleScene");
+        UnityEngine.SceneManagement.SceneManager.LoadScene("ScenaGovna");
     }
     void TurnOffGameObject()
     {

@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class UIScript : MonoBehaviour
 {
     [SerializeField] TMP_Text hp, ammo, reload_timer;
+    public float health = 100;
     [SerializeField] Projectiles projectiles;
     [SerializeField] PlayerController player;
 
@@ -16,6 +17,7 @@ public class UIScript : MonoBehaviour
 
     void Update()
     {
+        
         hp.text = player.hp.ToString();
         ammo.text = string.Format("{0} / {1}", projectiles.bulletsRemain, projectiles.magazineSize);
         if (projectiles.isReloading)

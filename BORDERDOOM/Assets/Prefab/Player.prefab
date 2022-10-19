@@ -159,7 +159,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 1, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -269,9 +269,10 @@ GameObject:
   - component: {fileID: 7998555569071090621}
   - component: {fileID: 7998555569071090619}
   - component: {fileID: 7998555569071090618}
-  m_Layer: 0
+  - component: {fileID: 904664542}
+  m_Layer: 7
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -322,6 +323,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 795aabbd646a9a049961c7a25b18263f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hp: 100
   speed: 4
   jump_Force: 10
 --- !u!114 &7998555569071090618
@@ -339,6 +341,21 @@ MonoBehaviour:
   sprint_Speed: 8
   move_Speed: 4
   crouch_Speed: 1.5
+--- !u!114 &904664542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7998555569071090622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e52bfe879a94f14599819dc4311adbe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 1
+  is_Player: 1
+  is_Enemy: 0
 --- !u!1001 &1927250710554202094
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -347,9 +364,33 @@ PrefabInstance:
     m_TransformParent: {fileID: 8981569703145772831}
     m_Modifications:
     - target: {fileID: 2870971075737598994, guid: 67f716418f7ba2146a845739c7782755, type: 3}
+      propertyPath: bullet
+      value: 
+      objectReference: {fileID: 4949996930887944671, guid: 929cbad6d7497224486ac3c8aabbf745, type: 3}
+    - target: {fileID: 2870971075737598994, guid: 67f716418f7ba2146a845739c7782755, type: 3}
       propertyPath: fpsCam
       value: 
       objectReference: {fileID: 7998555567610343526}
+    - target: {fileID: 2870971075737598994, guid: 67f716418f7ba2146a845739c7782755, type: 3}
+      propertyPath: spread
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2870971075737598994, guid: 67f716418f7ba2146a845739c7782755, type: 3}
+      propertyPath: reloadTime
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2870971075737598994, guid: 67f716418f7ba2146a845739c7782755, type: 3}
+      propertyPath: shootForce
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 2870971075737598994, guid: 67f716418f7ba2146a845739c7782755, type: 3}
+      propertyPath: muzzleFlash
+      value: 
+      objectReference: {fileID: 100006, guid: 30b4cc2728d8cec499fad63ba93785a4, type: 3}
+    - target: {fileID: 2870971075737598994, guid: 67f716418f7ba2146a845739c7782755, type: 3}
+      propertyPath: magazineSize
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 6239359517610320279, guid: 67f716418f7ba2146a845739c7782755, type: 3}
       propertyPath: m_RootOrder
       value: 0

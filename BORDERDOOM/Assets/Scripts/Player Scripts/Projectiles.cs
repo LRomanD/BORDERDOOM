@@ -84,8 +84,8 @@ public class Projectiles : MonoBehaviour
         { 
             if(hit.transform.tag == Tags.ENEMY_TAG)
             {
-                /*enemyKilling = */hit.transform.GetComponent<EnemyKilling>().ApplyDamage(damage);
-                //enemyKilling.health--;
+                hit.transform.GetComponent<EnemyKilling>().ApplyDamage(damage);
+                
                 Debug.Log("Est probitie");
             }
             targetPoint = hit.point; 
