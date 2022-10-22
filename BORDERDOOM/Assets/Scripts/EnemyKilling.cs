@@ -119,7 +119,7 @@ public class EnemyKilling : MonoBehaviour
     }
     void RestartGame()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene("ScenaGovna");
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Scene_A");
     }
     void TurnOffGameObject()
     {
