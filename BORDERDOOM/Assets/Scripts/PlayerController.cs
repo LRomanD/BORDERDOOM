@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class PlayerController : MonoBehaviour
 {
     public float hp = 100.0f;
@@ -14,8 +15,10 @@ public class PlayerController : MonoBehaviour
     private float gravity = 20f;//гравитация
 
     public float jump_Force = 10f;//сила прыжка
-    private float vertical_Velocity;//
+    private float vertical_Velocity;
 
+
+    public Animator animator;
 
     void Awake()
     {
@@ -26,12 +29,15 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         MoveThePlayer();
+
+
+        animator.SetFloat("speed", Mathf.Abs(Input.GetAxis(Axis.HORIZONTAL) + Mathf.Abs(Input.GetAxis(Axis.VERTICAL))));
     }
 
     void MoveThePlayer()
     {
         move_Direction = new Vector3(Input.GetAxis(Axis.HORIZONTAL), 0f, Input.GetAxis(Axis.VERTICAL));//изменение координат персонажа; управление; Horizontal - A D; Vertical - W S
-
+        
         move_Direction = transform.TransformDirection(move_Direction);//трансформация из локального пространства в мировое
         move_Direction *= speed * Time.deltaTime;//умножение на скорость и на deltaTime для более гладкого движения. Без deltaTime будет слишком быстро
 

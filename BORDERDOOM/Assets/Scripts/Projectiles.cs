@@ -2,6 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.AI;
+
+
+
 
 public class Projectiles : MonoBehaviour
 {
@@ -9,6 +13,7 @@ public class Projectiles : MonoBehaviour
 
     public float shootForce, upwardForce;
 
+    private Animator weaponAnim;
 
     public float timebetweenShooting, spread, reloadTime, timeBetweenShots;
     public int magazineSize, bulletPerTap;
@@ -48,13 +53,20 @@ public class Projectiles : MonoBehaviour
 
     private void Awake()
     {
+        weaponAnim = GetComponent<Animator>();
         bulletsLeft = magazineSize;
         readyToShoot = true;
     }
 
+    
+
     private void Update()
     {
         MyInput();
+
+        
+
+
         //if (ammunitionDisplay != null) ammunitionDisplay.SetText(bulletsLeft / bulletPerTap + " / " + magazineSize / bulletPerTap);
     }
 
@@ -75,9 +87,11 @@ public class Projectiles : MonoBehaviour
     private void Shoot()
     {
         readyToShoot = false;
+        
 
         Ray ray = fpsCam.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
         RaycastHit hit;
+        weaponAnim.SetTrigger("Fire");
 
         Vector3 targetPoint;
         if (Physics.Raycast(ray, out hit))
@@ -140,7 +154,9 @@ public class Projectiles : MonoBehaviour
     private void Reload()
     {
         reloading = true;
+        weaponAnim.SetTrigger("Reload");
         Invoke("ReloadFinished", reloadTime);
+        
     }
 
     private void ReloadFinished()

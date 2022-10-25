@@ -16,6 +16,8 @@ public class SprintAndCrouch : MonoBehaviour
 
     private bool is_Crouching; //присел ли или нет
 
+    public Animator weaponAnim;
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -28,15 +30,19 @@ public class SprintAndCrouch : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         Sprint();
         Crouch();
+        
     }//update
 
     void Sprint()
     {
         if (Input.GetKeyDown(KeyCode.LeftShift) && !is_Crouching) //если спринтанул, но не присел
         {
+            
             playerMovement.speed = sprint_Speed; //ускорить игрока
+            weaponAnim.SetBool("Sprint", true);
         }
 
         if (Input.GetKeyUp(KeyCode.LeftShift) && !is_Crouching) //если спринтанул, но не присел
