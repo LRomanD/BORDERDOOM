@@ -16,6 +16,8 @@ public class EnemyKilling : MonoBehaviour
     private EnemyController enemy_Controller;
     private UIScript player_Stats;
 
+    private GameOverScript gameOverScript;
+
     PlayerController player;
 
 
@@ -25,6 +27,7 @@ public class EnemyKilling : MonoBehaviour
     private void Start()
     {
         player = GetComponent<PlayerController>();
+        gameOverScript = GetComponent<GameOverScript>();
     }
 
     void Awake()
@@ -106,8 +109,8 @@ public class EnemyKilling : MonoBehaviour
 
         if (tag == Tags.PLAYER_TAG)
         {
-
-            Invoke("RestartGame", 3f);
+            //gameOverScript.GameOver();
+            //Invoke("RestartGame", 3f);
 
         }
         else

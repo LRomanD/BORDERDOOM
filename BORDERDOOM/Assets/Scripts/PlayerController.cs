@@ -7,14 +7,14 @@ public class PlayerController : MonoBehaviour
 {
     public float hp = 100.0f;
 
-    private CharacterController character_Controller;//объявление компонента
+    private CharacterController character_Controller;
 
-    private Vector3 move_Direction;//
+    private Vector3 move_Direction;
 
-    public float speed = 5f;//скорость
-    private float gravity = 20f;//гравитация
+    public float speed = 5f;
+    private float gravity = 20f;
 
-    public float jump_Force = 10f;//сила прыжка
+    public float jump_Force = 10f;
     private float vertical_Velocity;
 
 
@@ -22,7 +22,7 @@ public class PlayerController : MonoBehaviour
 
     void Awake()
     {
-        character_Controller = GetComponent<CharacterController>();//получение компонента
+        character_Controller = GetComponent<CharacterController>();
     }
 
 
@@ -36,35 +36,35 @@ public class PlayerController : MonoBehaviour
 
     void MoveThePlayer()
     {
-        move_Direction = new Vector3(Input.GetAxis(Axis.HORIZONTAL), 0f, Input.GetAxis(Axis.VERTICAL));//изменение координат персонажа; управление; Horizontal - A D; Vertical - W S
+        move_Direction = new Vector3(Input.GetAxis(Axis.HORIZONTAL), 0f, Input.GetAxis(Axis.VERTICAL));
         
-        move_Direction = transform.TransformDirection(move_Direction);//трансформация из локального пространства в мировое
-        move_Direction *= speed * Time.deltaTime;//умножение на скорость и на deltaTime для более гладкого движения. Без deltaTime будет слишком быстро
+        move_Direction = transform.TransformDirection(move_Direction);
+        move_Direction *= speed * Time.deltaTime;
 
-        ApplyGravity();//применение гравитации перед движением персонажа
+        ApplyGravity();
 
-        character_Controller.Move(move_Direction);//Move нужен, чтоб игрока двигало в направлении нажатой кнопки. К ch_con присваивается mov_dir
+        character_Controller.Move(move_Direction);
 
 
     }//move player
 
     void ApplyGravity()
     {
-        vertical_Velocity -= gravity * Time.deltaTime;//предотвращает отпрыгивание от поверхностей и полёта на луну, применение гравитации
+        vertical_Velocity -= gravity * Time.deltaTime;
 
-        PlayerJump();//применение прыжка
+        PlayerJump();
 
-        move_Direction.y = vertical_Velocity * Time.deltaTime;//сглаживание движения по y (вверх-вниз) - deltaTime; применение гравитации
+        move_Direction.y = vertical_Velocity * Time.deltaTime;
 
     }//apply gravity
 
 
     void PlayerJump()
     {
-        if (character_Controller.isGrounded && Input.GetKeyDown(KeyCode.Space))//если игрок касается земли и нажал на кнопку space
+        if (character_Controller.isGrounded && Input.GetKeyDown(KeyCode.Space))
         {
-            vertical_Velocity = jump_Force;//к игроку применяется переменная силы прыжка, следовательно происходит движение по вертикали вверх
-        }//если игрок касается земли и нажал на кнопку space
+            vertical_Velocity = jump_Force;
+        }
     }
 
     public void HealthChange(float health)

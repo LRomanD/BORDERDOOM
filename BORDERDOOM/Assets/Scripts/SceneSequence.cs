@@ -6,6 +6,7 @@ public class SceneSequence : MonoBehaviour
 {
     public GameObject introCam;
     public GameObject playerCam;
+    public GameObject hud;
     //public GameObject outroCam;
 
 
@@ -35,6 +36,7 @@ public class SceneSequence : MonoBehaviour
         this.gameObject.GetComponent<BoxCollider>().enabled = false;
         introCam.SetActive(true);
         playerCam.SetActive(false);
+        hud.SetActive(false);
         StartCoroutine(FinishCut());
 
 
@@ -42,8 +44,9 @@ public class SceneSequence : MonoBehaviour
 
     IEnumerator FinishCut()
     {
-        yield return new WaitForSeconds(26);
+        yield return new WaitForSeconds(15);
         playerCam.SetActive(true);
+        hud.SetActive(true);
         introCam.SetActive(false);
     }
 }
