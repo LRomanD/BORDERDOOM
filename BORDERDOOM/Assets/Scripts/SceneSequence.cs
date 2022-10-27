@@ -8,17 +8,17 @@ public class SceneSequence : MonoBehaviour
     public GameObject playerCam;
     //public GameObject outroCam;
 
-    
 
-    void Start()
+
+    /*void Start()
     {
         StartCoroutine(TheSequence());
         
-    }
+    }*/
 
-    
 
-    IEnumerator TheSequence ()
+
+    /*IEnumerator TheSequence ()
     {
         yield return new WaitForSeconds(26);
         introCam.SetActive(true);
@@ -27,6 +27,23 @@ public class SceneSequence : MonoBehaviour
         yield return new WaitForSeconds(0);
         playerCam.SetActive(true);
         introCam.SetActive(false);
+    }*/
+
+
+    void OnTriggerEnter(Collider other)
+    {
+        this.gameObject.GetComponent<BoxCollider>().enabled = false;
+        introCam.SetActive(true);
+        playerCam.SetActive(false);
+        StartCoroutine(FinishCut());
+
+
     }
 
+    IEnumerator FinishCut()
+    {
+        yield return new WaitForSeconds(26);
+        playerCam.SetActive(true);
+        introCam.SetActive(false);
+    }
 }

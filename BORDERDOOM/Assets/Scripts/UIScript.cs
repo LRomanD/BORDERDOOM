@@ -12,9 +12,12 @@ public class UIScript : MonoBehaviour
     [SerializeField] PlayerController player;
     [SerializeField] EnemyKilling enemyKilling;
 
-    private Image health_Stats, stamina_Stats;
+
+    //public static bool isHidden = false;
+    //public GameObject scriptUI;
 
     private float timer;
+
 
     private void Start()
     {
@@ -40,15 +43,15 @@ public class UIScript : MonoBehaviour
         }
     }
 
-    /*public void Display_HealthStats(float healthValue)
+    /*public void Show()
     {
-        healthValue /= 100f;
-        health_Stats.fillAmount = healthValue;
+        scriptUI.SetActive(false);
+        isHidden = false;
     }
 
-    public void Display_StaminaStats(float staminaValue)
+    public void Hide()
     {
-        staminaValue /= 100f;
-        stamina_Stats.fillAmount = staminaValue;
+        scriptUI.SetActive(true);
+        isHidden = true;
     }*/
 }
