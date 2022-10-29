@@ -7,20 +7,35 @@ using UnityEngine.SceneManagement;
 public class PauseScript : MonoBehaviour
 {
     public GameObject pauseMenu;
+    public SceneSequence cutscene;
 
     private bool isPaused = false;
 
     void Update()
     {
-        if(Input.GetKeyUp(KeyCode.Escape))
-            if(isPaused)
+        if (cutscene.intro == false)
+        {
+            if (Input.GetKeyUp(KeyCode.Escape))
+                if (isPaused)
+                {
+                    Resume();
+                }
+                else
+                {
+                    Pause();
+                }
+        }
+        else
+        {
+            if (Input.GetKeyUp(KeyCode.Escape))
             {
-                Resume();
+                cutscene.StopAllCoroutines();
+                cutscene.playerCam.SetActive(true);
+                cutscene.hud.SetActive(true);
+                cutscene.introCam.SetActive(false);
+                cutscene.intro = false;
             }
-            else
-            {
-                Pause();
-            }
+        }
     }
 
     public void Resume()
