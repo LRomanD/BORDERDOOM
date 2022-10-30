@@ -32,6 +32,6 @@ public class CutsceneTrigger : MonoBehaviour
         thePlayer.SetActive(true);
         hud.SetActive(true);
         cutsceneCam.SetActive(false);
-        gameOverScript.GameOver("Ura, pobeda");
+        gameOverScript.GameOver("Ya, pobedil");
     }
 }

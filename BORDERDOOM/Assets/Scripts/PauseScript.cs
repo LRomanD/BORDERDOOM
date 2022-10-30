@@ -15,7 +15,7 @@ public class PauseScript : MonoBehaviour
     {
         if (cutscene.intro == false)
         {
-            if (Input.GetKeyUp(KeyCode.Escape))
+            if (Input.GetKeyUp(KeyCode.Escape) || Input.GetKeyUp(KeyCode.P))
                 if (isPaused)
                 {
                     Resume();
@@ -27,7 +27,7 @@ public class PauseScript : MonoBehaviour
         }
         else
         {
-            if (Input.GetKeyUp(KeyCode.Escape))
+            if (Input.anyKeyDown)
             {
                 cutscene.StopAllCoroutines();
                 cutscene.playerCam.SetActive(true);
@@ -42,6 +42,8 @@ public class PauseScript : MonoBehaviour
     {
         pauseMenu.SetActive(false);
         Time.timeScale = 1f;
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
         isPaused = false;
     }
 
@@ -49,6 +51,8 @@ public class PauseScript : MonoBehaviour
     {
         pauseMenu.SetActive(true);
         Time.timeScale = 0;
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
         isPaused = true;
     }
 
