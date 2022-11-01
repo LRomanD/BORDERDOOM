@@ -729,7 +729,7 @@ MonoBehaviour:
   enemy_State: 0
   walk_Speed: 0.5
   run_Speed: 2.5
-  chase_Distance: 7
+  chase_Distance: 14
   attack_Distance: 1.8
   chase_After_Attack_Distance: 2
   patrol_Radius_Min: 20
@@ -771,7 +771,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e52bfe879a94f14599819dc4311adbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 250
+  health: 125
   is_Player: 0
   is_Enemy: 1
 --- !u!114 &490131140295480662

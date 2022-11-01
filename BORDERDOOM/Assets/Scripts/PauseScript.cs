@@ -30,6 +30,7 @@ public class PauseScript : MonoBehaviour
             if (Input.anyKeyDown)
             {
                 cutscene.StopAllCoroutines();
+                for (int i = 0; i < cutscene.Audios.Length; i++) cutscene.Audios[i].SetActive(true);
                 cutscene.playerCam.SetActive(true);
                 cutscene.hud.SetActive(true);
                 cutscene.introCam.SetActive(false);

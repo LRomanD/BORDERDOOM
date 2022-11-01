@@ -7,18 +7,20 @@ using UnityEngine.SceneManagement;
 public class GameOverScript : MonoBehaviour
 {
     public GameObject gameOver;
+    public AudioSource audio;
+    public AudioClip clip;
     [SerializeField] PlayerController player;
     [SerializeField] CameraController camera;
     [SerializeField] Projectiles projectiles;
     [SerializeField] PauseScript pause;
     [SerializeField] TMP_Text crosshair, label;
 
-    string text = "You're ded";
+    string str = "You're ded";
 
     public bool gameIsOver = false;
     private void Update()
     {
-        if (player.hp <= 0) GameOver(text);
+        if (player.hp <= 0) GameOver(str);
     }
     public void GameOver(string text)
     {
@@ -31,6 +33,12 @@ public class GameOverScript : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
         gameOver.SetActive(true);
+        if (text == "Ya pobedil")
+        {
+            audio.clip = clip;
+            audio.loop = false;
+            audio.Play();
+        }
         Time.timeScale = 0;
     }
 
